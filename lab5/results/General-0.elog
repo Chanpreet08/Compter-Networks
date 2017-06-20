@@ -1,0 +1,186 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1280 rid General-0-20170323-19:43:32-14761 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t lab5.ForwardingNetwork n ForwardingNetwork cm 1
+MS id 1 d ""
+MC id 2 c Node t lab5.Node pid 1 n A
+MS id 2 d p=98,92
+GC m 2 g 1048576 n in i 0 o 0
+GC m 2 g 1048577 n in i 1 o 0
+GC m 2 g 1048578 n in i 2 o 0
+GC m 2 g 2621440 n out i 0 o 1
+GC m 2 g 2621441 n out i 1 o 1
+GC m 2 g 2621442 n out i 2 o 1
+MC id 3 c Node t lab5.Node pid 1 n B
+MS id 3 d p=464,78
+GC m 3 g 1048576 n in i 0 o 0
+GC m 3 g 1048577 n in i 1 o 0
+GC m 3 g 1048578 n in i 2 o 0
+GC m 3 g 2621440 n out i 0 o 1
+GC m 3 g 2621441 n out i 1 o 1
+GC m 3 g 2621442 n out i 2 o 1
+MC id 4 c Node t lab5.Node pid 1 n C
+MS id 4 d p=264,160
+GC m 4 g 1048576 n in i 0 o 0
+GC m 4 g 1048577 n in i 1 o 0
+GC m 4 g 1048578 n in i 2 o 0
+GC m 4 g 2621440 n out i 0 o 1
+GC m 4 g 2621441 n out i 1 o 1
+GC m 4 g 2621442 n out i 2 o 1
+MC id 5 c Node t lab5.Node pid 1 n D
+MS id 5 d p=112,234
+GC m 5 g 1048576 n in i 0 o 0
+GC m 5 g 1048577 n in i 1 o 0
+GC m 5 g 1048578 n in i 2 o 0
+GC m 5 g 2621440 n out i 0 o 1
+GC m 5 g 2621441 n out i 1 o 1
+GC m 5 g 2621442 n out i 2 o 1
+MC id 6 c Node t lab5.Node pid 1 n E
+MS id 6 d p=464,209
+GC m 6 g 1048576 n in i 0 o 0
+GC m 6 g 1048577 n in i 1 o 0
+GC m 6 g 1048578 n in i 2 o 0
+GC m 6 g 2621440 n out i 0 o 1
+GC m 6 g 2621441 n out i 1 o 1
+GC m 6 g 2621442 n out i 2 o 1
+CC sm 2 sg 2621440 dm 3 dg 1048576
+CC sm 3 sg 2621440 dm 2 dg 1048576
+CC sm 2 sg 2621441 dm 4 dg 1048576
+CC sm 4 sg 2621440 dm 2 dg 1048577
+CC sm 2 sg 2621442 dm 5 dg 1048576
+CC sm 5 sg 2621440 dm 2 dg 1048578
+CC sm 4 sg 2621441 dm 3 dg 1048577
+CC sm 3 sg 2621441 dm 4 dg 1048577
+CC sm 6 sg 2621440 dm 4 dg 1048578
+CC sm 4 sg 2621442 dm 6 dg 1048576
+CC sm 6 sg 2621441 dm 3 dg 1048578
+CC sm 3 sg 2621442 dm 6 dg 1048577
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n counter pe -1
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n "" pe -1
+- INFO (Node)ForwardingNetwork.A: 1
+BS id 1 tid 1 eid 1 etid 1 c Packet n "" pe 0
+CL id 1 tid 1 eid 1 etid 1 c Packet n "" pe 0 cid 2
+SH sm 2 sg 2621441
+ES t 0
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n counter pe 0
+ES t 0
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n counter pe -1
+CM id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n "" pe -1
+- INFO (Node)ForwardingNetwork.B: 0
+BS id 4 tid 4 eid 4 etid 4 c Packet n "" pe 0
+CL id 4 tid 4 eid 4 etid 4 c Packet n "" pe 0 cid 5
+SH sm 3 sg 2621440
+ES t 0
+BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n counter pe 0
+ES t 0
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n counter pe -1
+CM id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n "" pe -1
+- INFO (Node)ForwardingNetwork.C: 2
+BS id 7 tid 7 eid 7 etid 7 c Packet n "" pe 0
+CL id 7 tid 7 eid 7 etid 7 c Packet n "" pe 0 cid 8
+SH sm 4 sg 2621442
+ES t 0
+BS id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n counter pe 0
+ES t 0
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n counter pe -1
+CM id 10 tid 10 eid 10 etid 10 c omnetpp::cMessage n "" pe -1
+- INFO (Node)ForwardingNetwork.D: 0
+BS id 10 tid 10 eid 10 etid 10 c Packet n "" pe 0
+CL id 10 tid 10 eid 10 etid 10 c Packet n "" pe 0 cid 11
+SH sm 5 sg 2621440
+ES t 0
+BS id 9 tid 9 eid 9 etid 9 c omnetpp::cMessage n counter pe 0
+ES t 0
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n counter pe -1
+CM id 13 tid 13 eid 13 etid 13 c omnetpp::cMessage n "" pe -1
+- INFO (Node)ForwardingNetwork.E: 1
+BS id 13 tid 13 eid 13 etid 13 c Packet n "" pe 0
+CL id 13 tid 13 eid 13 etid 13 c Packet n "" pe 0 cid 14
+SH sm 6 sg 2621441
+ES t 0
+BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n counter pe 0
+ES t 0
+ME
+
+E # 1 t 0 m 4 ce 0 msg 1
+BS id 1 tid 1 eid 1 etid 1 c Packet n "" pe 1
+CL id 1 tid 1 eid 1 etid 1 c Packet n "" pe 1 cid 15
+SH sm 4 sg 2621442
+ES t 0
+
+E # 2 t 0 m 2 ce 0 msg 0
+CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n "" pe -1
+BS id 16 tid 16 eid 16 etid 16 c Packet n "" pe 2
+CL id 16 tid 16 eid 16 etid 16 c Packet n "" pe 2 cid 17
+SH sm 2 sg 2621441
+ES t 0
+
+E # 3 t 0 m 2 ce 0 msg 4
+BS id 4 tid 4 eid 4 etid 4 c Packet n "" pe 3
+CL id 4 tid 4 eid 4 etid 4 c Packet n "" pe 3 cid 18
+SH sm 2 sg 2621442
+ES t 0
+
+E # 4 t 0 m 3 ce 0 msg 3
+CM id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n "" pe -1
+BS id 19 tid 19 eid 19 etid 19 c Packet n "" pe 4
+CL id 19 tid 19 eid 19 etid 19 c Packet n "" pe 4 cid 20
+SH sm 3 sg 2621440
+ES t 0
+
+E # 5 t 0 m 6 ce 0 msg 7
+
+E # 6 t 0 m 4 ce 0 msg 6
+CM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n "" pe -1
+BS id 21 tid 21 eid 21 etid 21 c Packet n "" pe 6
+CL id 21 tid 21 eid 21 etid 21 c Packet n "" pe 6 cid 22
+SH sm 4 sg 2621442
+ES t 0
+
+E # 7 t 0 m 2 ce 0 msg 10
+
+E # 8 t 0 m 5 ce 0 msg 9
+CM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n "" pe -1
+BS id 23 tid 23 eid 23 etid 23 c Packet n "" pe 8
+CL id 23 tid 23 eid 23 etid 23 c Packet n "" pe 8 cid 24
+SH sm 5 sg 2621440
+ES t 0
+
+E # 9 t 0 m 3 ce 0 msg 13
+
+E # 10 t 0 m 6 ce 0 msg 12
+CM id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n "" pe -1
+
+E # 11 t 0 m 6 ce 1 msg 1
+
+E # 12 t 0 m 4 ce 2 msg 16
+BS id 16 tid 16 eid 16 etid 16 c Packet n "" pe 12
+CL id 16 tid 16 eid 16 etid 16 c Packet n "" pe 12 cid 26
+SH sm 4 sg 2621442
+ES t 0
+
+E # 13 t 0 m 5 ce 3 msg 4
+
+E # 14 t 0 m 2 ce 4 msg 19
+BS id 19 tid 19 eid 19 etid 19 c Packet n "" pe 14
+CL id 19 tid 19 eid 19 etid 19 c Packet n "" pe 14 cid 27
+SH sm 2 sg 2621442
+ES t 0
+
+E # 15 t 0 m 6 ce 6 msg 21
+
+E # 16 t 0 m 2 ce 8 msg 23
+
+E # 17 t 0 m 6 ce 12 msg 16
+
+E # 18 t 0 m 5 ce 14 msg 19
+SE e 0 c 13 m "No more events -- simulation ended at event #18, t=0."
